@@ -16,3 +16,8 @@ Additional requirements:
 - Use sortable file names
 - Do not write to the same file from different processes
 - Delete old files
+- Use buffering (flush by size and by timeout)
+- Optimize Writable stream buffering
+- Write multiline to single string
+- Optimize stack for logging errors
+- Write to multiple destinations
