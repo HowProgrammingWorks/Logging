@@ -5,8 +5,8 @@ const logger = require('./logger.js');
 // On application initialization
 
 const application = {};
-//application.logger = logger(process.stdout)(JSON.stringify)('app1');
-application.logger = logger('./file.log')()('app1');
+application.logger = logger(process.stdout)()('app1');
+//application.logger = logger('./file.log')(JSON.stringify)('app1');
 
 // In module1
 

@@ -18,13 +18,7 @@ const logger = file => {
   };
 };
 
-logger.defaultSerializer = obj => {
-  const res = [];
-  for (const key in obj) {
-    res.push(obj[key]);
-  }
-  return res.join('\t');
-};
+logger.defaultSerializer = obj => Object.values(obj).join('\t');
 
 logger.colors = {
   warning: '\x1b[1;33m',
