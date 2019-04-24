@@ -26,3 +26,13 @@ info('I have info for you');
 warning('Hello there!');
 error('World is not found');
 debug('Bye!');
+
+/*
+const begin = process.hrtime.bigint();
+for (let i = 0; i < 1000000; i++) {
+  info('Write more then 60Mb logs, line: ' + i);
+}
+const end = process.hrtime.bigint();
+const time = (end - begin) / 1000000n;
+console.log(`Time: ${time} milliseconds`);
+*/
