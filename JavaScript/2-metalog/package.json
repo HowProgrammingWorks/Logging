@@ -1,15 +1,15 @@
 {
   "name": "metalog-example",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "requires": true,
   "engines": {
     "node": ">=6.0.0"
   },
   "main": "./main.js",
   "dependencies": {
-    "@metarhia/common": "^1.5.0",
+    "@metarhia/common": "^2.1.0",
     "concolor": "^0.1.12",
     "metalog": "^1.1.0",
-    "metastreams": "^0.1.1"
+    "metastreams": "^0.1.2"
   }
 }
