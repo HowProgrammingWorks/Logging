@@ -8,7 +8,7 @@
   "main": "./main.js",
   "dependencies": {
     "@metarhia/common": "^2.1.0",
-    "concolor": "^0.1.12",
+    "concolor": "^0.1.16",
     "metalog": "^1.1.0",
     "metastreams": "^0.1.1"
   }
