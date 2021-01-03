@@ -9,7 +9,7 @@
   "dependencies": {
     "@metarhia/common": "^2.1.0",
     "concolor": "^0.1.12",
-    "metalog": "^1.1.0",
+    "metalog": "^1.1.2",
     "metastreams": "^0.1.1"
   }
 }
