@@ -4,13 +4,13 @@ const fs = require('fs');
 
 // file => serializer => app => module => kind => msg
 
-const logger = file => {
+const logger = (file) => {
   const { isTTY } = file;
   const stream = isTTY ? file : fs.createWriteStream(file);
-  return (serializer = logger.defaultSerializer) => app => module => kind => {
+  return (serializer = logger.defaultSerializer) => (app) => (module) => (kind) => {
     const color = isTTY ? (logger.colors[kind] || logger.colors.info) : '';
     const normal = isTTY ? logger.colors.normal : '';
-    return msg => {
+    return (msg) => {
       const date = new Date().toISOString();
       const record = { date, kind, app, module, msg };
       const line = serializer(record);
@@ -19,7 +19,7 @@ const logger = file => {
   };
 };
 
-logger.defaultSerializer = obj => Object.values(obj).join('\t');
+logger.defaultSerializer = (obj) => Object.values(obj).join('\t');
 
 logger.colors = {
   warning: '\x1b[1;33m',
