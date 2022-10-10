@@ -2,7 +2,6 @@
 
 const vm = require('vm');
 const fsp = require('fs').promises;
-const util = require('util');
 const metalog = require('metalog');
 
 (async () => {

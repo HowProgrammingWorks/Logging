@@ -7,7 +7,8 @@ const fs = require('fs');
 const logger = (file) => {
   const { isTTY } = file;
   const stream = isTTY ? file : fs.createWriteStream(file);
-  return (serializer = logger.defaultSerializer) => (app) => (module) => (kind) => {
+  const { defaultSerializer } = logger;
+  return (serializer = defaultSerializer) => (app) => (module) => (kind) => {
     const color = isTTY ? (logger.colors[kind] || logger.colors.info) : '';
     const normal = isTTY ? logger.colors.normal : '';
     return (msg) => {
