@@ -1,7 +1,7 @@
 'use strict';
 
-const vm = require('vm');
-const fsp = require('fs').promises;
+const vm = require('node:vm');
+const fsp = require('node:fs').promises;
 const metalog = require('metalog');
 
 (async () => {
